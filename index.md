@@ -75,36 +75,62 @@ The data cleaning process involved:
    - Created a single analysis DataFrame combining user feedback with recipe attributes
 
 **Cleaned DataFrame head**:
-*(Note: You'll need to run your notebook and add the actual head() output here)*
+
+*(After running your notebook, use `_df.head().to_markdown(index=False)` to generate the markdown table and paste it here)*
 
 ### Univariate Analysis
 
 **Distribution of Recipe Ratings**:
-*(Embed your plotly histogram of ratings here)*
+
+<iframe
+  src="assets/rating-distribution.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 The rating distribution shows that most recipes receive relatively high scores (4-5 stars), with very few extremely low ratings. This suggests users tend to be generous with ratings.
 
 **Distribution of Cooking Time**:
-*(Embed your plotly histogram of cooking time here)*
+
+<iframe
+  src="assets/cooking-time-distribution.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 Cooking times are right-skewed; most recipes take under roughly an hour, but there's a long tail of recipes requiring significantly more time. This indicates the platform contains a mix of quick everyday recipes and longer, more involved dishes.
 
 ### Bivariate Analysis
 
 **Rating vs. Cooking Time**:
-*(Embed your scatter plot with trendline here)*
+
+<iframe
+  src="assets/rating-vs-minutes.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 The scatter plot suggests that extremely short and extremely long recipes both tend to have slightly more variable ratings, while many moderately timed recipes cluster at high ratings. The trendline is fairly flat, indicating that cook time alone may not strongly determine user satisfaction.
 
 **Rating vs. Number of Ingredients**:
-*(Embed your box plot here)*
+
+<iframe
+  src="assets/rating-vs-ingredients.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 The box plot shows that recipes with a moderate number of ingredients often achieve high median ratings, while very simple or very complex recipes can have more spread in their ratings. This hints that there may be an optimal level of complexity that home cooks favor.
 
 ### Interesting Aggregates
 
 **Average Ratings by Cooking Time Quartiles**:
-*(Embed your grouped table here)*
+
+*(After running your notebook, use `agg_time.to_markdown(index=False)` to generate the markdown table and paste it here)*
 
 This table shows how average ratings and engagement vary across different cooking time categories, providing insights into whether recipe duration affects user satisfaction.
 
@@ -139,7 +165,12 @@ We use a permutation test because it makes no assumptions about the distribution
 
 **Conclusion**: *(Add your conclusion based on the p-value)*
 
-*(Embed your permutation test visualization here)*
+<iframe
+  src="assets/hypothesis-test.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ---
 
@@ -221,7 +252,12 @@ To improve upon the baseline model, we engineered the following new features:
 
 **Improvement**: *(Add improvement value and percentage here)*
 
-*(Embed your predicted vs actual ratings visualization here)*
+<iframe
+  src="assets/predicted-vs-actual.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ---
 
@@ -256,7 +292,12 @@ We investigate whether our final model performs differently for different groups
 
 **Conclusion**: *(Add your conclusion based on the p-value)*
 
-*(Embed your fairness analysis permutation test visualization here)*
+<iframe
+  src="assets/fairness-analysis.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ---
 
