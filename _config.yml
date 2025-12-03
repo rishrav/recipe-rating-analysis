@@ -1,0 +1,17 @@
+title: Recipe Rating Analysis
+description: Analysis of recipe ratings to understand what characteristics lead to highly-rated recipes
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
