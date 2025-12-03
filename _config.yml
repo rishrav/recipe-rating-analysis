@@ -1,7 +1,10 @@
 title: Recipe Rating Analysis
 description: Analysis of recipe ratings to understand what characteristics lead to highly-rated recipes
-theme: minima
+
+remote_theme: pages-themes/slate@v0.2.0
+
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
 
 # Exclude from processing
